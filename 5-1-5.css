@@ -1,0 +1,74 @@
+            #header {
+                height: 14vw;
+                width:100%;
+            }
+
+            #header.fixed{
+                position:fixed;
+                z-index:999;
+                top:8vw;
+                left:0;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: #666;
+                    padding: 10px;
+                }
+
+            section {
+                padding: 300px 0;
+            }
+
+@media screen and (max-width:600px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    img {
+        height: auto;
+    }
+
+        img.rogo {
+            position: fixed;
+            position: relative;
+            max-width: 30%;
+            left: 37%;
+            top: 1.8vw;
+        }
+
+        img.botan {
+            position: fixed;
+            position: relative;
+            max-width: 10%;
+            left: 53%;
+        }
+
+        img.zyaritan {
+            position: relative;
+            top: 2vw;
+            left: 0.5vw;
+            max-width: 95%;
+        }
+
+        img.obi {
+            position: relative;
+            top: -2vw;
+            left: 0.0vw;
+            z-index: 2;
+            max-width: 104%;
+        }
+
+    .maru img {
+        position: relative;
+        top: 10vw;
+        max-width: 50%;
+    }
+}
