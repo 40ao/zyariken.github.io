@@ -1,0 +1,118 @@
+#header {
+    height: 14vw;
+    width: 100%;
+}
+
+    #header.fixed {
+        position: fixed;
+        z-index: 999;
+        top: 8vw;
+        left: 0;
+    }
+
+
+
+ul {
+    list-style: none;
+}
+
+a:link {
+    color: #778899;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #778899;
+    text-decoration: none;
+}
+
+a:active {
+    background-color: lightpink;
+    color: white;
+}
+
+/*アコーディオンで現れるエリア*/
+.block{
+    display: none; /*はじめは非表示*/
+    background: #ffa594; /*保険用*/
+    background: -moz-linear-gradient(top, white 0%, #ffa594 100%); /*古いFireFox向け*/
+    background: -webkit-linear-gradient(top, white 0%, #ffa594 100%); /*古いSafariなど向け*/
+    background: linear-gradient(to bottom, white 0%, #ffa594 100%); /*正規の指定*/
+    text-align: center;
+    position: relative;
+    color: #778899;
+    z-index: 999;
+    top: -30px;
+}
+
+p.mozi {
+    font-size: 30px;
+    line-height: 90px;
+    font-family: "MS PGothic";
+}
+
+img.rogo {
+    position: fixed;
+    position: relative;
+    max-width: 30%;
+    left: 37%;
+    top: 1.8vw;
+}
+
+
+/*==================================================
+　5-2-2 2本線が×に
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+    /*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+    position: relative;
+    width: 50px;
+    height: 50px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /*丸くなる*/
+    background: #f08080;
+    left: 82%;
+    top: -12vw;
+}
+
+/*ボタン内側*/
+
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s; /*アニメーションの設定*/
+        position: absolute;
+        left: 13px;
+        height: 2px;
+        background-color: whitesmoke;
+    }
+
+
+.openbtn span:nth-of-type(1) {
+	top:18px;
+  	width: 50%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:25px;
+  	width:30%;
+}
+
+    /*activeクラスが付与されると線が回転して×に*/
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 16px;
+        left: 15px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 35%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        top: 28px;
+        left: 15px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 35%;
+    }
