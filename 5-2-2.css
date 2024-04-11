@@ -1,0 +1,38 @@
+
+	
+/*ボタン内側*/
+
+.botan span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 81%;
+    height: 1.8vw;
+  }
+
+
+.botan span:nth-of-type(1) {
+	top:22px;	
+  	width: 50%;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:29px;
+  	width:30%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.botan.active span:nth-of-type(1) {
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+}
+
+.botan.active span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+}
