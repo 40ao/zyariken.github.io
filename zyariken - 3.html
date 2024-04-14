@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=devise-width,initial-scale=1">
+    <title>じゃりけん　マニュアル</title>
+    <style>
+                @media screen and (max-width:600px) {
+                    * {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+
+                    img {
+                        height: auto;
+                    }
+
+                    ul {
+                        list-style: none;
+                    }
+
+                    a:link {
+                        color: #778899;
+                        text-decoration: none;
+                    }
+
+                    a:visited {
+                        color: #778899;
+                        text-decoration: none;
+                    }
+
+                    a:active {
+                        background-color: lightpink;
+                        color: white;
+                    }
+
+                   img.rogo {
+                        position: fixed;
+                        position: relative;
+                        max-width: 30%;
+                        left: 37%;
+                        top: 1.8vw;
+                        }
+
+                    img.obi {
+                        animation: anim 1s forwards;
+                    }
+
+                    @keyframes anim {
+                        0% {
+                            transform: translateX(-200px);
+                        }
+
+                        100% {
+                            transform: translateX(0px);
+                        }
+                    }
+                   
+
+
+
+                    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+                    .openbtn {
+                        /*ボタン内側の基点となるためrelativeを指定。
+        追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50%;
+                        background: #f08080;
+                        left: 82%;
+                        top: -345px;
+                    }
+
+                        /*ボタン内側*/
+
+                        .openbtn span {
+                            display: inline-block;
+                            transition: all .4s; /*アニメーションの設定*/
+                            position: absolute;
+                            left: 13px;
+                            height: 2px;
+                            background-color: whitesmoke;
+                        }
+
+                            .openbtn span:nth-of-type(1) {
+                                top: 18px;
+                                width: 50%;
+                            }
+
+                            .openbtn span:nth-of-type(2) {
+                                top: 25px;
+                                width: 30%;
+                            }
+
+                        /*activeクラスが付与されると線が回転して×に*/
+
+                        .openbtn.active span:nth-of-type(1) {
+                            top: 16px;
+                            left: 15px;
+                            transform: translateY(6px) rotate(-45deg);
+                            width: 35%;
+                        }
+
+                        .openbtn.active span:nth-of-type(2) {
+                            top: 28px;
+                            left: 15px;
+                            transform: translateY(-6px) rotate(45deg);
+                            width: 35%;
+                        }
+
+                    /*アコーディオンで現れるエリア*/
+                    .box {
+                        display: none; /*はじめは非表示*/
+                        background: #ffa594; /*保険用*/
+                        background: -moz-linear-gradient(top, white 0%, #ffa594 100%); /*古いFireFox向け*/
+                        background: -webkit-linear-gradient(top, white 0%, #ffa594 100%); /*古いSafariなど向け*/
+                        background: linear-gradient(to bottom, white 0%, #ffa594 100%); /*正規の指定*/
+                        text-align: center;
+                        position: relative;
+                        color: #778899;
+                        z-index: 999;
+                        top:-330px;
+                    }
+
+                    p.mozi {
+                        font-size: 30px;
+                        line-height: 90px;
+                        font-family: "MS PGothic";
+                    }
+
+                    img.zyaritan {
+                        position: relative;
+                        top: -100vw;
+                        left: 0.5vw;
+                        max-width: 95%;
+                    }
+
+                    img.obi {
+                        position: relative;
+                        top: -2vw;
+                        left: 0.0vw;
+                        z-index: 2;
+                        max-width: 104%;
+                    }
+
+                    footer {
+                        height: 20vw;
+                        background-color: #f08080;
+                        color: aliceblue;
+                    }
+
+                    #footer {
+                        text-align: center;
+                        line-height: 20vw;
+                    }
+
+
+                }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/5-1-5.css">
+</head>
+<body>
+
+    <header id="header">
+        <figure>
+            <div>
+                <a href="C:/html/zyariken%20-%203.html"><img class="rogo" src="C:\html\jariken\じゃりけん　先頭.jpg" alt="ロゴ"></a>
+            </div>
+        </figure>
+        <ul class="accordion-area">
+
+            <li>
+                <!--li ~ /li までが一つのアコーディオン-->
+                <section>
+                    <p class="openbtn"><span></span><span></span></p>
+                    <div class="box">
+                        <p class=" mozi">
+                            <a href="C:/html/zyariken%20-%203.html">トップ</a><br>
+                            <a href="C:/html/jariken/ginyo-ruzukuri2.html"> ギニョール作り</a><br>
+                            <a href="#">棒人形作り</a><br>
+                            <a href="C:/html/jariken/kanikeko%20-%202.html"> 簡易けこ</a><br>
+                            <a href="#">ガチけこ</a>
+                        </p>
+
+
+                    </div>
+                </section>
+            </li>
+        </ul>
+    </header>
+
+    <figure>
+        <div style="text-align:center">
+            <img class="zyaritan" src="C:\html\jariken\じゃりたん　使用.jpg" alt="じゃりたん">
+            <img class="obi" src="C:\html\jariken\帯.jpg">
+        </div>
+
+        <p class="maru" style="text-align:center">
+
+            <a href="C:/html/jariken/ginyo-ruzukuri2.html"> 
+            <img src="C:\html\jariken\ギニョール作り.jpg" alt="ギニョール作り" />
+            </a>
+            
+            <br><br><br>
+        
+
+            <img src="C:\html\jariken\棒人形作り.jpg">
+
+            <br><br><br>
+           <a href="C:/html/jariken/kanikeko%20-%202.html">
+            <img src="C:\html\jariken\簡易けこ.jpg" alt="簡易けこ"/>
+           </a>
+
+            <br><br><br>
+            <img src="C:\html\jariken\ガチけこ.jpg">
+
+            <br><br><br>
+        </p>
+    </figure>
+
+
+    <br><br><br>
+
+    <footer id="footer">
+        <small>&copy; 児童文化研究会</small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->
+    <script src="js/5-1-5.js"></script>
+
+    <!--自作のJS-->
+    <script src="js/5-2-2.js"></script>
+
+    <!--自作のJS-->
+    <script src="js/9-2-1.js"></script>
+
+</body>
+</html>
