@@ -1,4 +1,4 @@
-z﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 
 <html lang="ja">
@@ -24,16 +24,23 @@ z﻿<!DOCTYPE html>
                     max-width: 95%;
                 }
                                         
-                    img.obi {
-                        animation: anim 1s forwards;
-                    }
+                img.obi {
+                    position: relative;
+                    top: -2vw;
+                    left: 0.0vw;
+                    z-index: 2;
+                    max-width: 104%;
+                }
 
             .maru img {
                 position: relative;
                 top: 10vw;
                 max-width: 50%;
             }
-
+                    
+            img.obi {
+                animation: anim 1s forwards;
+            }
                     @keyframes anim {
                         0% {
                             transform: translateX(-200px);
