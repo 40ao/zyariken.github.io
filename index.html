@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=devise-width,initial-scale=1">
-    <title>じゃりけん　マニュアル</title>
+    <title>じゃりけん　人に優しいマニュアル</title>
     <style>
                 @media screen and (max-width:600px) {
                     * {
@@ -16,34 +16,20 @@
                     img {
                         height: auto;
                     }
-
-                    ul {
-                        list-style: none;
-                    }
-
-                    a:link {
-                        color: #778899;
-                        text-decoration: none;
-                    }
-
-                    a:visited {
-                        color: #778899;
-                        text-decoration: none;
-                    }
-
-                    a:active {
-                        background-color: lightpink;
-                        color: white;
-                    }
-
-                   img.rogo {
-                        position: fixed;
-                        position: relative;
-                        max-width: 30%;
-                        left: 37%;
-                        top: 1.8vw;
-                        }
-
+                    
+                img.zyaritan {
+                    position: relative;
+                    top: 2vw;
+                    left: 0.5vw;
+                    max-width: 95%;
+                }
+                    
+            .maru img {
+                position: relative;
+                top: 10vw;
+                max-width: 50%;
+            }
+                    
                     img.obi {
                         animation: anim 1s forwards;
                     }
@@ -56,113 +42,22 @@
                         100% {
                             transform: translateX(0px);
                         }
-                    }
-                   
+                        
+            footer {
+                height: 20vw;
+                background-color: #f08080;
+                color: aliceblue;
+            }
 
-
-
-                    /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-                    .openbtn {
-                        /*ボタン内側の基点となるためrelativeを指定。
-        追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
-                        position: relative;
-                        width: 50px;
-                        height: 50px;
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 50%;
-                        background: #f08080;
-                        left: 82%;
-                        top: -345px;
+            #footer {
+                text-align: center;
+                line-height: 20vw;
+            }
                     }
 
-                        /*ボタン内側*/
-
-                        .openbtn span {
-                            display: inline-block;
-                            transition: all .4s; /*アニメーションの設定*/
-                            position: absolute;
-                            left: 13px;
-                            height: 2px;
-                            background-color: whitesmoke;
-                        }
-
-                            .openbtn span:nth-of-type(1) {
-                                top: 18px;
-                                width: 50%;
-                            }
-
-                            .openbtn span:nth-of-type(2) {
-                                top: 25px;
-                                width: 30%;
-                            }
-
-                        /*activeクラスが付与されると線が回転して×に*/
-
-                        .openbtn.active span:nth-of-type(1) {
-                            top: 16px;
-                            left: 15px;
-                            transform: translateY(6px) rotate(-45deg);
-                            width: 35%;
-                        }
-
-                        .openbtn.active span:nth-of-type(2) {
-                            top: 28px;
-                            left: 15px;
-                            transform: translateY(-6px) rotate(45deg);
-                            width: 35%;
-                        }
-
-                    /*アコーディオンで現れるエリア*/
-                    .box {
-                        display: none; /*はじめは非表示*/
-                        background: #ffa594; /*保険用*/
-                        background: -moz-linear-gradient(top, white 0%, #ffa594 100%); /*古いFireFox向け*/
-                        background: -webkit-linear-gradient(top, white 0%, #ffa594 100%); /*古いSafariなど向け*/
-                        background: linear-gradient(to bottom, white 0%, #ffa594 100%); /*正規の指定*/
-                        text-align: center;
-                        position: relative;
-                        color: #778899;
-                        z-index: 999;
-                        top:-330px;
-                    }
-
-                    p.mozi {
-                        font-size: 30px;
-                        line-height: 90px;
-                        font-family: "MS PGothic";
-                    }
-
-                    img.zyaritan {
-                        position: relative;
-                        top: -100vw;
-                        left: 0.5vw;
-                        max-width: 95%;
-                    }
-
-                    img.obi {
-                        position: relative;
-                        top: -2vw;
-                        left: 0.0vw;
-                        z-index: 2;
-                        max-width: 104%;
-                    }
-
-                    footer {
-                        height: 20vw;
-                        background-color: #f08080;
-                        color: aliceblue;
-                    }
-
-                    #footer {
-                        text-align: center;
-                        line-height: 20vw;
-                    }
-
-
-                }
+                
     </style>
-    <link rel="stylesheet" type="text/css" href="5-1-5.css">
+    <link rel="stylesheet" type="text/css" href="./5-2-2-2.css">
 </head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0S59MLRJ4"></script>
@@ -181,13 +76,13 @@
                 <a href="index.html"><img class="rogo" src="https://github.com/40ao/zyariken.github.io/assets/160617906/2770b987-6b74-4a02-84e4-a0347b6ee17b" alt="ロゴ"></a>
             </div>
         </figure>
-        <ul class="accordion-area">
+        <ul class="space">
 
             <li>
                 <!--li ~ /li までが一つのアコーディオン-->
                 <section>
                     <p class="openbtn"><span></span><span></span></p>
-                    <div class="box">
+                    <div class="block">
                         <p class=" mozi">
                             <a href="index.html">トップ</a><br>
                             <a href="ginyo-ruzukuri.html"> ギニョール作り</a><br>
